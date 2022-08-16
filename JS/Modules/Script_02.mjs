@@ -3,6 +3,4 @@
     
 }
 
-export{
-    sq
-};
+export{sq};
