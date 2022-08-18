@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="RPS.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <body>
+        <section class="game">
+            <!--Title -->
+            <!--<div class="title">Rock Paper Scissor</div>--!>
+
+            <!--Display Score of player and computer -->
+            <div class="score">
+                <div class="playerScore">
+                    <h2>Player</h2>
+                    <p class="p-count count">0</p>
+
+                </div>
+                <div class="computerScore">
+                    <h2>Computer</h2>
+                    <p class="c-count count">0</p>
+
+                </div>
+            </div>
+
+            <div class="move">Choose your move</div>
+
+            <!--Number of moves left before game ends -->
+            <div class="movesleft">Moves Left: 10 </div>
+
+            <!--Options available to player to play game -->
+            <div class="options">
+                <button class="rock">Rock</button>
+                <button class="paper">Paper</button>
+                <button class="scissor">Scissors</button>
+                <i class="bi bi-scissors" class="scissor"></i>
+            </div>
+
+            <!--Final result of game -->
+            <div class="result"></div>
+
+            <!--Reload the game -->
+            <button class="reload"></button>
+
+        </section>
+
+        <script src="RPS.js"></script>
+    </body>
+
+</html>
