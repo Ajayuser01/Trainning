@@ -1,19 +1,19 @@
-var canvas = document.getElementById("canvas");
-if (canvas.getContext) {
-  var context = canvas.getContext("2d");
+//Face
+var canvas1 = document.getElementById("canvas1");
+if (canvas1.getContext) {
+  var context = canvas1.getContext("2d");
   context.beginPath();
-  // Outer circle outer iedsjs cjdlkfcjsa,djooidsiufuJZJVKXVIVH 00
   context.arc(75, 75, 50, 0, Math.PI * 2, true);
   context.moveTo(110, 75);
-  // Mouth
   context.arc(75, 75, 35, 0, Math.PI, false);
-  // Lefy and Right eye
   context.moveTo(55, 65);
   context.arc(60, 65, 5, 0, Math.PI * 2, true);
   context.arc(90, 65, 5, 0, Math.PI * 2, true);
   context.stroke();
   context.beginPath();
 }
+
+//Triangle
 
 var canvas2 = document.getElementById("canvas2");
 if (canvas2.getContext) {
@@ -26,6 +26,7 @@ if (canvas2.getContext) {
   context.fill();
 }
 
+//Box Square
 var canvas3 = document.getElementById("canvas3");
 if (canvas3.getContext) {
   var context = canvas3.getContext("2d");
@@ -34,6 +35,8 @@ if (canvas3.getContext) {
   context.clearRect(40, 40, 60, 60);
   context.strokeRect(45, 45, 50, 50);
 }
+
+//Two Colored Box overlapping
 
 var canvas4 = document.getElementById("canvas4");
 if (canvas4.getContext) {
@@ -46,7 +49,9 @@ if (canvas4.getContext) {
   context.fillRect(35, 30, 55, 50);
 }
 
-var canvas5 = document.getElementById("circle");
+//Red Color Circle
+
+var canvas5 = document.getElementById("canvas5");
 if (canvas5.getContext) {
   var ctx = canvas5.getContext("2d");
   var X = canvas5.width / 2;
@@ -58,30 +63,27 @@ if (canvas5.getContext) {
   ctx.strokeStyle = "#FF0000";
   ctx.stroke();
 }
-function draw() {
-  var ctx = document.getElementById("myCanvas").getContext("2d");
-  var counter = 0;
-  for (var i = 0; i < 6; i++) {
-    for (var j = 0; j < 6; j++) {
-      //Start from white and goes to black
-      ctx.fillStyle =
-        "rgb(" +
-        Math.floor(255 - 42.5 * i) +
-        "," +
-        Math.floor(255 - 42.5 * i) +
-        "," +
-        Math.floor(255 - 42.5 * j) +
-        ")";
-      ctx.beginPath();
-      if (i === counter && j === counter) {
-        //creates the circles
-        ctx.arc(25 + j * 50, 30 + i * 50, 20, 0, Math.PI * 2, true);
-        ctx.fill();
-        //creates a border around the circles so white one will be vissible
-        ctx.stroke();
-      }
+
+//Multiple Dot circles with shading colors
+
+var ctx = document.getElementById("canvas6").getContext("2d");
+var counter = 0;
+for (var i = 0; i < 6; i++) {
+  for (var j = 0; j < 6; j++) {
+    ctx.fillStyle =
+      "rgb(" +
+      Math.floor(255 - 42.5 * i) +
+      "," +
+      Math.floor(255 - 42.5 * i) +
+      "," +
+      Math.floor(255 - 42.5 * j) +
+      ")";
+    ctx.beginPath();
+    if (i === counter && j === counter) {
+      ctx.arc(25 + j * 50, 30 + i * 50, 20, 0, Math.PI * 2, true);
+      ctx.fill();
+      ctx.stroke();
     }
-    counter++;
   }
+  counter++;
 }
-draw();
